@@ -1,9 +1,12 @@
 import java.util.Scanner;
 public class monthlyPayment {
+    //TODO: To have set and get methods for the variables
+
     private double monthlyInterestRate;
     private double monthlyPayment;
     private double totalPayment;
 
+    //method to calculate the payable amount per month
     double loanToPay(double loanAmount, double annualInterestRate, Byte years) {
         double monthlyInterestRate = (annualInterestRate / 1200);
         double monthlyPayment = (loanAmount * monthlyInterestRate) / (1 - (1 / (Math.pow((1 + monthlyInterestRate), (years * 12)))));
@@ -13,11 +16,11 @@ public class monthlyPayment {
         return payable_per_month;
     }
 
+    //TODO : ensure the display method works when called from main body
     public void display() {
         System.out.print("Amount payable per month is:");
         System.out.print("Payable amount :");
     }
-
 
     public static void main(String[] args) {
         System.out.println("Enter loan amount:");
